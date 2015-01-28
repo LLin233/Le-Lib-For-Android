@@ -30,8 +30,7 @@ public class MainActivity extends Activity {
 				getApplicationContext(), mDatas, R.layout.list_item) {
 			@Override
 			public void convert(ViewHolder viewHolder, String item) {
-				TextView view = viewHolder.getView(R.id.id_tv_title);
-				view.setText(item);
+				 viewHolder.setText(R.id.id_tv_title, item);
 			}
 
 		});

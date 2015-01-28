@@ -2,11 +2,11 @@ package ll.android.baseadapterhelper;
 
 
 import android.content.Context;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class ViewHolder
 {
@@ -66,7 +66,16 @@ public class ViewHolder
 	{
 		return mConvertView;
 	}
-
+	
+	 
+    public ViewHolder setText(int viewId, String text)  
+    {  
+        TextView view = getView(viewId);  
+        view.setText(text);  
+        return this;  
+    }  
+  
+ 
 	
 
 }
