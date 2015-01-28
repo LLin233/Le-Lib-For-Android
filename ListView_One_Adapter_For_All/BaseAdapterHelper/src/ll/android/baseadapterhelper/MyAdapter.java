@@ -48,25 +48,5 @@ public class MyAdapter extends BaseAdapter {
         return viewHolder.getConvertView();  
     } 
 
-//	@Override
-//	public View getView(int position, View convertView, ViewGroup parent) {
-//		ViewHolder viewHolder = null;
-//		if (convertView == null) {
-//			convertView = mInflater.inflate(R.layout.list_item, parent,
-//					false);
-//			viewHolder = new ViewHolder();
-//			viewHolder.mTextView = (TextView) convertView
-//					.findViewById(R.id.id_tv_title);
-//			convertView.setTag(viewHolder);
-//		} else {
-//			viewHolder = (ViewHolder) convertView.getTag();
-//		}
-//		viewHolder.mTextView.setText(mDatas.get(position));
-//		return convertView;
-//	}
-//
-//	private final class ViewHolder {
-//		TextView mTextView;
-//	}
 
 }
