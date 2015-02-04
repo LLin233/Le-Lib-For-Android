@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:TodoList="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/action_add_task"
+        android:icon="@drawable/ic_action_new"
+        TodoList:showAsAction="always"
+        android:title="Add Task" />
+
+</menu>

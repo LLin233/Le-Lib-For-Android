@@ -1,0 +1,9 @@
+<resources>
+    <!-- the theme applied to the application or activity -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/myActionBar</item>
+    </style>
+    <style name="myActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@android:color/holo_blue_light</item>
+    </style>
+</resources>
