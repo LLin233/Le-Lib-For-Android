@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class BoundedBlockingQueue<E>  implements FixedSizeBlockingQueue<E>{
+public class BoundedBlockingQueue<E> implements FixedSizeBlockingQueue<E>{
 
  private int capacity;
  private Queue<E> queue;
