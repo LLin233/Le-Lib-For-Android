@@ -1,0 +1,45 @@
+<android.support.v4.widget.DrawerLayout android:id="@+id/drawer_layout"
+                                        xmlns:android="http://schemas.android.com/apk/res/android"
+                                        xmlns:tools="http://schemas.android.com/tools"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:baselineAligned="false"
+                                        android:divider="?android:attr/dividerHorizontal"
+                                        android:orientation="horizontal"
+                                        android:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <fragment
+            android:id="@+id/item_detail_container"
+            android:name="androidpath.ll.eventbusdemo.ItemDetailFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <fragment
+            android:id="@+id/item_list"
+            android:name="androidpath.ll.eventbusdemo.ItemListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>
