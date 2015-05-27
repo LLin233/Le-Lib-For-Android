@@ -20,6 +20,16 @@ public class Item {
         addItem(new Item("4", "Item 4"));
         addItem(new Item("5", "Item 5"));
         addItem(new Item("6", "Item 6"));
+        addItem(new Item("7", "Item 7"));
+        addItem(new Item("8", "Item 8"));
+        addItem(new Item("9", "Item 9"));
+        addItem(new Item("10", "Item 10"));
+        addItem(new Item("11", "Item 11"));
+        addItem(new Item("12", "Item 12"));
+        addItem(new Item("13", "Item 13"));
+        addItem(new Item("14", "Item 14"));
+        addItem(new Item("15", "Item 15"));
+        addItem(new Item("16", "Item 16"));
     }
 
     private static void addItem(Item item) {
