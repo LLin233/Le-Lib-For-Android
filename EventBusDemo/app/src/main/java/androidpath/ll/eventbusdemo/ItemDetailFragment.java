@@ -1,17 +1,13 @@
 package androidpath.ll.eventbusdemo;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidpath.ll.eventbusdemo.Models.Item;
-import de.greenrobot.event.EventBus;
 
 /**
  * Created by Le on 2015/5/26.
@@ -21,20 +17,21 @@ public class ItemDetailFragment extends Fragment {
     private TextView tvDetail;
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // register
-        EventBus.getDefault().register(this);
+        //EventBus.getDefault().register(this);
+        EventBus.getInstatnce().register(this);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         // Unregister
-        EventBus.getDefault().unregister(this);
+        //EventBus.getDefault().unregister(this);
+        EventBus.getInstatnce().unregister(this);
     }
 
     /**

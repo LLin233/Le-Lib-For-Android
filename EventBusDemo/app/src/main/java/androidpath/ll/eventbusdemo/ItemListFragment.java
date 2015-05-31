@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidpath.ll.eventbusdemo.Models.Event.ItemListEvent;
 import androidpath.ll.eventbusdemo.Models.Item;
-import de.greenrobot.event.EventBus;
+
 
 /**
  * Created by Le on 2015/5/26.
@@ -23,7 +23,8 @@ public class ItemListFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Register
-        EventBus.getDefault().register(this);
+        //EventBus.getDefault().register(this);
+        EventBus.getInstatnce().register(this);
     }
 
     @Override
@@ -37,7 +38,8 @@ public class ItemListFragment extends ListFragment {
     public void onDestroy() {
         super.onDestroy();
         // Unregister
-        EventBus.getDefault().unregister(this);
+        //EventBus.getDefault().unregister(this);
+        EventBus.getInstatnce().unregister(this);
     }
 
 
@@ -50,7 +52,8 @@ public class ItemListFragment extends ListFragment {
             public void run() {
                 try {
                     Thread.sleep(2000); // fake loading list from server
-                    EventBus.getDefault().post(new ItemListEvent(Item.ITEMS)); // Posts the given event to the event bus
+                    //EventBus.getDefault().post(new ItemListEvent(Item.ITEMS)); // Posts the given event to the event bus
+                    EventBus.getInstatnce().post(new ItemListEvent(Item.ITEMS));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -74,7 +77,8 @@ public class ItemListFragment extends ListFragment {
                 getListView().getItemAtPosition(position).toString(),
                 Toast.LENGTH_SHORT).show();
         mDrawerLayout.closeDrawer(mDrawer);
-        EventBus.getDefault().post(getListView().getItemAtPosition(position));
+        //EventBus.getDefault().post(getListView().getItemAtPosition(position));
+        EventBus.getInstatnce().post(getListView().getItemAtPosition(position));
     }
 
 }
